@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var testNavigationController : UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        if let window = window {
+            window.backgroundColor = UIColor.whiteColor()
+            let storyViewController : UIViewController = StoryViewController()
+            testNavigationController = UINavigationController(rootViewController: storyViewController)
+            
+            // adding navigation bar properties
+            
+            testNavigationController?.navigationBar.translucent = false
+            
+            window.rootViewController = testNavigationController
+            window.backgroundColor = UIColor.whiteColor()
+            window.makeKeyAndVisible()
+        }
+        
         return true
     }
 
