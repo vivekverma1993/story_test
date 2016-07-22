@@ -12,6 +12,10 @@
 		E2D6565B1D41D14400B3879E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D656591D41D14400B3879E /* Main.storyboard */; };
 		E2D6565D1D41D14400B3879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D6565C1D41D14400B3879E /* Assets.xcassets */; };
 		E2D656601D41D14400B3879E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D6565E1D41D14400B3879E /* LaunchScreen.storyboard */; };
+		E2D656681D41DA5700B3879E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E2D656671D41DA5700B3879E /* data.json */; };
+		E2D6566D1D41DAE300B3879E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2D6566A1D41DAD600B3879E /* Roboto-Bold.ttf */; };
+		E2D6566E1D41DAE300B3879E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2D6566B1D41DAD600B3879E /* Roboto-Light.ttf */; };
+		E2D6566F1D41DAE300B3879E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2D6566C1D41DAD600B3879E /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E2D6565C1D41D14400B3879E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2D6565F1D41D14400B3879E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D656611D41D14400B3879E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D656671D41DA5700B3879E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E2D6566A1D41DAD600B3879E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		E2D6566B1D41DAD600B3879E /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E2D6566C1D41DAD600B3879E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		E2D656541D41D14400B3879E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				E2D656721D41DB5200B3879E /* Modal */,
+				E2D656711D41DB4B00B3879E /* Views */,
+				E2D656701D41DB3900B3879E /* Controllers */,
 				E2D656551D41D14400B3879E /* AppDelegate.swift */,
 				E2D656571D41D14400B3879E /* ViewController.swift */,
 				E2D656591D41D14400B3879E /* Main.storyboard */,
 				E2D6565C1D41D14400B3879E /* Assets.xcassets */,
 				E2D6565E1D41D14400B3879E /* LaunchScreen.storyboard */,
 				E2D656611D41D14400B3879E /* Info.plist */,
+				E2D656671D41DA5700B3879E /* data.json */,
+				E2D6566A1D41DAD600B3879E /* Roboto-Bold.ttf */,
+				E2D6566B1D41DAD600B3879E /* Roboto-Light.ttf */,
+				E2D6566C1D41DAD600B3879E /* Roboto-Regular.ttf */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		E2D656701D41DB3900B3879E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E2D656711D41DB4B00B3879E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E2D656721D41DB5200B3879E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +158,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D6566D1D41DAE300B3879E /* Roboto-Bold.ttf in Resources */,
+				E2D6566E1D41DAE300B3879E /* Roboto-Light.ttf in Resources */,
+				E2D6566F1D41DAE300B3879E /* Roboto-Regular.ttf in Resources */,
 				E2D656601D41D14400B3879E /* LaunchScreen.storyboard in Resources */,
 				E2D6565D1D41D14400B3879E /* Assets.xcassets in Resources */,
 				E2D6565B1D41D14400B3879E /* Main.storyboard in Resources */,
+				E2D656681D41DA5700B3879E /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roposo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roposo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
