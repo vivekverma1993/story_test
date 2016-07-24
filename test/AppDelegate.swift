@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
             window.backgroundColor = UIColor.whiteColor()
-            let storyViewController : UIViewController = StoryViewController()
+            let storyViewController  = StoryViewController(collectionViewLayout: UICollectionViewFlowLayout())
             testNavigationController = UINavigationController(rootViewController: storyViewController)
             
             // adding navigation bar properties

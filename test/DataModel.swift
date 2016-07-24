@@ -12,6 +12,7 @@ class DataModel: NSObject {
     
     var users : [User]!
     var stories : [Story]!
+    var cellHeights : [CGFloat]!
     
     
     static let sharedInstance = DataModel()

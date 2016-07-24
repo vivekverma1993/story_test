@@ -64,4 +64,22 @@ class Globals: NSObject {
         
         
     }
+    
+    
+    static func loadJson(fileName: String) -> Array<AnyObject>? {
+        if let url = NSBundle.mainBundle().URLForResource(fileName, withExtension: "json") {
+            if let data = NSData(contentsOfURL: url) {
+                do {
+                    let object = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    if let array = object as? Array<AnyObject> {
+                        return array
+                    }
+                } catch {
+                    print("Error!! Unable to parse  \(fileName).json")
+                }
+            }
+            print("Error!! Unable to load  \(fileName).json")
+        }
+        return nil
+    }
 }
