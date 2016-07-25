@@ -27,15 +27,12 @@ PODS:
   - SDWebImage/WebP (3.8.1):
     - libwebp
     - SDWebImage/Core
-  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - SDWebImage/WebP
-  - SVProgressHUD
 
 SPEC CHECKSUMS:
   libwebp: 68ba2001ba6806ee52837ebd77a551a0b6567e4e
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
 COCOAPODS: 0.39.0

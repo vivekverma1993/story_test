@@ -73,10 +73,20 @@ class StoryViewController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         view.backgroundColor = UIColor.blueColor()
         datasetup()
         loadDataFromFile()
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.title = "Stories"
+        self.collectionView?.reloadData()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationItem.title = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,7 +155,22 @@ class StoryViewController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let storydetailViewController : StoryDetailViewController = StoryDetailViewController()
         
+        
+        let user_id = DataModel.sharedInstance.stories[indexPath.row].db
+        var objectuser : User!
+        for user in DataModel.sharedInstance.users{
+            if(user.id == user_id){
+                objectuser = user
+                break
+            }
+        }
+        
+        storydetailViewController.story = DataModel.sharedInstance.stories[indexPath.row]
+        storydetailViewController.user = objectuser
+        
+        self.navigationController?.pushViewController(storydetailViewController, animated: true)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -164,7 +189,6 @@ class StoryViewController: UICollectionViewController, UICollectionViewDelegateF
         storyCell.story = DataModel.sharedInstance.stories[indexPath.row]
         storyCell.followButton.tag = indexPath.row
         
-        print(indexPath.row)
         
         storyCell.followButton.addTarget(self, action:#selector(StoryViewController.followClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 

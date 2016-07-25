@@ -85,11 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-test/SDWebImage.framework"
-  install_framework "Pods-test/SVProgressHUD.framework"
   install_framework "Pods-test/libwebp.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-test/SDWebImage.framework"
-  install_framework "Pods-test/SVProgressHUD.framework"
   install_framework "Pods-test/libwebp.framework"
 fi

@@ -5,6 +5,5 @@ use_frameworks!
 
 target 'test' do
 pod 'SDWebImage/WebP'
-pod 'SVProgressHUD'
 end
 

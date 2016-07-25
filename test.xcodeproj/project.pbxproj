@@ -10,6 +10,8 @@
 		87FB000456F8A19F0F6CD4BA /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E261DD24D180204CDD0C76 /* Pods_test.framework */; };
 		E2659C461D42625900BAAC7C /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2659C451D42625900BAAC7C /* StoryDetailViewController.swift */; };
 		E2659C4A1D42D9BD00BAAC7C /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2659C491D42D9BD00BAAC7C /* StoryCell.swift */; };
+		E2659C4F1D455D4400BAAC7C /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2659C4E1D455D4400BAAC7C /* ParallaxHeaderView.m */; };
+		E2659C521D455E7500BAAC7C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E2659C511D455E7500BAAC7C /* UIImage+ImageEffects.m */; };
 		E2D656561D41D14400B3879E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D656551D41D14400B3879E /* AppDelegate.swift */; };
 		E2D656581D41D14400B3879E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D656571D41D14400B3879E /* ViewController.swift */; };
 		E2D6565D1D41D14400B3879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D6565C1D41D14400B3879E /* Assets.xcassets */; };
@@ -31,6 +33,11 @@
 		D0E261DD24D180204CDD0C76 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2659C451D42625900BAAC7C /* StoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		E2659C491D42D9BD00BAAC7C /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		E2659C4C1D455D4300BAAC7C /* test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2659C4D1D455D4400BAAC7C /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		E2659C4E1D455D4400BAAC7C /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
+		E2659C501D455E7500BAAC7C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		E2659C511D455E7500BAAC7C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		E2D656521D41D14400B3879E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D656551D41D14400B3879E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D656571D41D14400B3879E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +76,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2659C4B1D455D3500BAAC7C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E2659C4D1D455D4400BAAC7C /* ParallaxHeaderView.h */,
+				E2659C4E1D455D4400BAAC7C /* ParallaxHeaderView.m */,
+				E2659C501D455E7500BAAC7C /* UIImage+ImageEffects.h */,
+				E2659C511D455E7500BAAC7C /* UIImage+ImageEffects.m */,
+				E2659C4C1D455D4300BAAC7C /* test-Bridging-Header.h */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		E2D656491D41D14400B3879E = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +109,7 @@
 		E2D656541D41D14400B3879E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				E2659C4B1D455D3500BAAC7C /* Library */,
 				E2D656721D41DB5200B3879E /* Modal */,
 				E2D656711D41DB4B00B3879E /* Views */,
 				E2D656701D41DB3900B3879E /* Controllers */,
@@ -267,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2659C4F1D455D4400BAAC7C /* ParallaxHeaderView.m in Sources */,
 				E2D6567D1D422A1300B3879E /* Story.swift in Sources */,
 				E2D656791D4227E400B3879E /* DataModel.swift in Sources */,
 				E2D656761D42256600B3879E /* Globals.swift in Sources */,
+				E2659C521D455E7500BAAC7C /* UIImage+ImageEffects.m in Sources */,
 				E2D6567B1D422A0A00B3879E /* User.swift in Sources */,
 				E2D656741D41E48300B3879E /* StoryViewController.swift in Sources */,
 				E2659C4A1D42D9BD00BAAC7C /* StoryCell.swift in Sources */,
@@ -383,11 +405,14 @@
 			baseConfigurationReference = BAFCDB8A79A100A47AC39C0C /* Pods-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roposo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -396,11 +421,13 @@
 			baseConfigurationReference = 1EBF39A9C94917750004F86B /* Pods-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roposo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
 			};
 			name = Release;
 		};
